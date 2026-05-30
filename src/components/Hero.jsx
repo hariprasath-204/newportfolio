@@ -1,0 +1,77 @@
+import React from 'react';
+import { ArrowRight, Download, MessageSquare } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
+
+const Hero = () => {
+  return (
+    <section id="hero" className="hero container">
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', lineHeight: '1.1', fontWeight: '800' }}>
+            Full Stack <br />
+            <span className="text-gradient">Software Engineer</span>
+          </h1>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '500px', lineHeight: '1.6' }}>
+            I am a BCA graduate specializing in building scalable, high-performance web and mobile applications. With expertise in the MEAN stack, React, and Android development, I turn complex ideas into elegant technical solutions.
+          </p>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <a href="#contact" style={{ textDecoration: 'none' }}>
+              <button className="btn-primary">View My Work</button>
+            </a>
+            <a href="https://wa.me/919791486908" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+              <button style={{ 
+                padding: '0.8rem 2rem', 
+                background: 'transparent', 
+                border: '2px solid rgba(255, 255, 255, 0.7)', 
+                color: 'var(--text-primary)', 
+                borderRadius: '30px', 
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--text-primary)';
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.7)';
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+              >
+                <MessageSquare size={18} /> WhatsApp
+              </button>
+            </a>
+          </div>
+        </div>
+        <div className="hero-image animate-fade-in" style={{ animationDelay: '0.2s', display: 'flex', justifyContent: 'center' }}>
+          <div style={{ 
+            width: '380px', 
+            height: '380px', 
+            borderRadius: '50%', 
+            padding: '5px',
+            background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))',
+            boxShadow: '0 0 30px rgba(0, 210, 255, 0.2)'
+          }}>
+            <img 
+              src={profileImg} 
+              alt="Hari Prasath S" 
+              style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover', 
+                borderRadius: '50%',
+                border: '6px solid #141729'
+              }} 
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
