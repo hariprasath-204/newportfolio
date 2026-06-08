@@ -5,13 +5,13 @@ import profileImg from '../assets/profile.jpg';
 const Hero = () => {
   return (
     <section id="hero" className="hero container">
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', lineHeight: '1.1', fontWeight: '800' }}>
+      <div className="hero-content">
+        <div className="hero-text animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 style={{ marginBottom: '1rem', lineHeight: '1.1', fontWeight: '800' }}>
             Full Stack <br />
             <span className="text-gradient">Software Engineer</span>
           </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '500px', lineHeight: '1.6' }}>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', maxWidth: '500px', lineHeight: '1.6' }}>
             I am a BCA graduate specializing in building scalable, high-performance web and mobile applications. With expertise in the MEAN stack, React, and Android development, I turn complex ideas into elegant technical solutions.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
@@ -49,8 +49,9 @@ const Hero = () => {
         </div>
         <div className="hero-image animate-fade-in" style={{ animationDelay: '0.2s', display: 'flex', justifyContent: 'center' }}>
           <div style={{ 
-            width: '380px', 
-            height: '380px', 
+            width: '100%', 
+            maxWidth: '380px', 
+            aspectRatio: '1 / 1', 
             borderRadius: '50%', 
             padding: '5px',
             background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))',
