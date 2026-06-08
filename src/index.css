@@ -470,3 +470,10 @@ a {
     padding: 0 1.5rem;
   }
 }
+
+/* Hide Custom Cursor on touch devices and mobile */
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  .custom-arrow-cursor {
+    display: none !important;
+  }
+}
