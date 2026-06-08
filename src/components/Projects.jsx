@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExternalLink, Code2, Image } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -17,21 +18,25 @@ const Projects = () => {
     {
       title: 'College Debugging Event Platform',
       description: 'A dynamic web platform built to host and manage a competitive college debugging event, successfully deployed on Vercel.',
+      liveDemo: 'https://debbuging.vercel.app/',
       tags: ['React', 'Node.js', 'Firebase', 'Wandbox API', 'Vercel']
     },
     {
       title: 'College Codathon Event Platform',
       description: 'A comprehensive web application designed to manage participants, submissions, and live leaderboards for a college Codathon event.',
+      liveDemo: 'https://codathan.vercel.app/',
       tags: ['React', 'Node.js', 'Firebase', 'Wandbox API', 'Vercel']
     },
     {
       title: 'College Quiz Event Platform',
       description: 'An interactive real-time quiz application built for college events, featuring live scoring and real-time leaderboards.',
+      liveDemo: 'https://softtech-assocation-quiz.vercel.app/',
       tags: ['React', 'Node.js', 'Firebase', 'Vercel']
     },
     {
       title: 'Try-It Online Compiler',
       description: 'A multi-language online code compiler supporting C, C++, Java, and Python, powered by the Wandbox API for robust code execution.',
+      liveDemo: 'https://try-it-compiler.vercel.app/',
       tags: ['React', 'Node.js', 'Wandbox API']
     },
     {
@@ -42,11 +47,13 @@ const Projects = () => {
     {
       title: 'Coin Catcher Game',
       description: 'An interactive 2D arcade-style coin catcher game developed using the Unity Engine and C#.',
+      screenshots: 'coinCatcher',
       tags: ['Unity', 'C#', 'Game Development']
     },
     {
       title: 'Taskflow UI Design',
       description: 'A clean, modern mobile application UI design for a task and project management application built using Flutter and Dart.',
+      screenshots: 'taskFlow',
       tags: ['Flutter', 'Dart', 'UI/UX Design', 'Mobile App']
     }
   ];
@@ -88,7 +95,31 @@ const Projects = () => {
                 {project.description}
               </p>
               
-
+              {(project.liveDemo || project.github || project.screenshots) && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem', marginBottom: '1rem' }}>
+                  {project.liveDemo && (
+                    <a href={project.liveDemo} target="_blank" rel="noreferrer" style={{
+                      display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-primary)', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
+                    }}>
+                      View Project <ExternalLink size={14} />
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer" style={{
+                      display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-secondary)', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
+                    }}>
+                      View Code <Code2 size={14} />
+                    </a>
+                  )}
+                  {project.screenshots && (
+                    <a href={`https://github.com/hariprasath-204/newportfolio/tree/main/src/assets/${project.screenshots}`} target="_blank" rel="noreferrer" style={{
+                      display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#ffb86c', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
+                    }}>
+                      View Screenshots <Image size={14} />
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
 
             <div style={{ 
