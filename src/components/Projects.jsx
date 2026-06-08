@@ -43,6 +43,11 @@ const Projects = () => {
       title: 'Coin Catcher Game',
       description: 'An interactive 2D arcade-style coin catcher game developed using the Unity Engine and C#.',
       tags: ['Unity', 'C#', 'Game Development']
+    },
+    {
+      title: 'Taskflow UI Design',
+      description: 'A clean, modern mobile application UI design for a task and project management application built using Flutter and Dart.',
+      tags: ['Flutter', 'Dart', 'UI/UX Design', 'Mobile App']
     }
   ];
 
