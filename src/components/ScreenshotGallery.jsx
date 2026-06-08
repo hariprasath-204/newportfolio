@@ -4,18 +4,18 @@ import { ArrowLeft } from 'lucide-react';
 const ScreenshotGallery = ({ projectId }) => {
   let images = [];
   let title = 'Project Screenshots';
-  let gridStyle = { display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' };
+  let gridClass = '';
   
   if (projectId === 'coinCatcher') {
     title = 'Coin Catcher Game - Screenshots';
     const rawImages = import.meta.glob('../assets/coinCatcher/*.{png,jpg,jpeg,svg,PNG,JPG,JPEG}', { eager: true, import: 'default' });
     images = Object.values(rawImages);
-    gridStyle = { display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', maxWidth: '1200px', margin: '0 auto' };
+    gridClass = 'gallery-grid-2';
   } else if (projectId === 'taskFlow') {
     title = 'Taskflow UI Design - Screenshots';
     const rawImages = import.meta.glob('../assets/taskFlow/*.{png,jpg,jpeg,svg,PNG,JPG,JPEG}', { eager: true, import: 'default' });
     images = Object.values(rawImages);
-    gridStyle = { display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '1.5rem', maxWidth: '1400px', margin: '0 auto' };
+    gridClass = 'gallery-grid-5';
   }
 
   return (
@@ -32,7 +32,7 @@ const ScreenshotGallery = ({ projectId }) => {
         {images.length === 0 ? (
           <p style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>No screenshots found in the assets folder.</p>
         ) : (
-          <div style={gridStyle}>
+          <div className={gridClass}>
             {images.map((src, index) => (
               <div key={index} className="glass animate-fade-in" style={{ padding: '1rem', borderRadius: '16px', width: '100%', height: '100%', animationDelay: `${index * 0.1}s` }}>
                 <img 
