@@ -1,5 +1,7 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ExternalLink } from 'lucide-react';
+
+const certImages = Object.values(import.meta.glob('../assets/certificates/*.jpeg', { eager: true, query: '?url', import: 'default' }));
 
 const Certificates = () => {
   const certificateInfo = [
@@ -54,6 +56,35 @@ const Certificates = () => {
               <div style={{ display: 'inline-block', backgroundColor: 'var(--bg-secondary)', padding: '0.3rem 0.6rem', borderRadius: '8px', marginTop: '0.5rem' }}>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', margin: 0 }}>{cert.issuer}</p>
                 <p style={{ color: 'var(--accent-secondary)', fontSize: '0.8rem', fontWeight: '600', margin: 0, marginTop: '0.2rem' }}>{cert.date}</p>
+              </div>
+              
+              <div style={{ marginTop: '1rem' }}>
+                <a 
+                  href={certImages[index] || '#'} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
+                    color: 'var(--accent-primary)',
+                    fontSize: '0.9rem',
+                    fontWeight: '600',
+                    border: '1px solid var(--accent-primary)',
+                    padding: '0.4rem 1rem',
+                    borderRadius: '20px',
+                    transition: 'all 0.3s ease',
+                    textDecoration: 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(0, 255, 135, 0.1)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }}
+                >
+                  View <ExternalLink size={14} />
+                </a>
               </div>
             </div>
           </div>
