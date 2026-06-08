@@ -9,7 +9,8 @@ const Hero = () => {
         <div className="hero-text animate-fade-in" style={{ animationDelay: '0.1s' }}>
           <h1 style={{ marginBottom: '1rem', lineHeight: '1.1', fontWeight: '800' }}>
             Full Stack <br />
-            <span className="text-gradient">Software Engineer</span>
+            Software Engineer <br />
+            <span className="text-gradient">& App Developer</span>
           </h1>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', maxWidth: '500px', lineHeight: '1.6' }}>
             I am a BCA graduate specializing in building scalable, high-performance web and mobile applications. With expertise in the MEAN stack, React, and Android development, I turn complex ideas into elegant technical solutions.
