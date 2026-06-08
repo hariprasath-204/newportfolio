@@ -91,7 +91,7 @@ const Projects = () => {
               
               {project.screenshots && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem', marginBottom: '1rem' }}>
-                  <a href={`https://github.com/hariprasath-204/newportfolio/tree/main/src/assets/${project.screenshots}`} target="_blank" rel="noreferrer" style={{
+                  <a href={`#screenshots-${project.screenshots}`} target="_blank" rel="noreferrer" style={{
                     display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#ffb86c', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
                   }}>
                     View Screenshots <Image size={14} />
