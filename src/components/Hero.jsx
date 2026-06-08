@@ -7,9 +7,8 @@ const Hero = () => {
     <section id="hero" className="hero container">
       <div className="hero-content">
         <div className="hero-text animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <h1 style={{ marginBottom: '1rem', lineHeight: '1.1', fontWeight: '800' }}>
-            Full Stack <br />
-            Software Engineer <br />
+          <h1 className="main-title" style={{ marginBottom: '1rem', lineHeight: '1.2', fontWeight: '800' }}>
+            Full Stack Software Engineer <br />
             <span className="text-gradient">& App Developer</span>
           </h1>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem', maxWidth: '500px', lineHeight: '1.6' }}>
