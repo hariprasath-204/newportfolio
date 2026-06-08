@@ -1,23 +1,33 @@
 import React from 'react';
 import { ChevronRight, ExternalLink } from 'lucide-react';
 
-const certImages = Object.values(import.meta.glob('../assets/certificates/*.jpeg', { eager: true, query: '?url', import: 'default' }));
+import imgWebDev from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (1).jpeg';
+import imgAppDev from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM.jpeg';
+import imgHtmlGames from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (2).jpeg';
+import imgBytewars from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (3).jpeg';
+import imgIot from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (4).jpeg';
+import imgTreasureHunt from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (5).jpeg';
+import imgTreasurer from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (6).jpeg';
+import imgLegacyOfCode from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (7).jpeg';
+import imgDigits from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (8).jpeg';
+import imgBugMaze from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (9).jpeg';
+import imgWebDesign from '../assets/certificates/WhatsApp Image 2026-05-29 at 8.27.14 PM (10).jpeg';
 
 const Certificates = () => {
   const certificateInfo = [
-    { title: '1st Prize in Debugging', event: 'BYTEWARS State Level Meet', issuer: 'Saiva Bhanu Kshatriya College', date: 'March 2025' },
-    { title: '1st Prize in Debugging', event: 'DIGITS\'25 State Level Tech Competition', issuer: 'V.H.N. Senthikumara Nadar College', date: 'August 2025' },
-    { title: '1st Place in Web Development', event: 'One Day Intra Hackathon 2K26', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2026' },
-    { title: '1st Place in Application Development', event: 'One Day Intra Hackathon 2K26', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2026' },
-    { title: '1st Prize in Treasure Hunt App', event: 'Talent Expo QMAZE 2K26', issuer: 'Ayya Nadar Janaki Ammal College', date: 'February 2026' },
-    { title: '2nd Prize in HTML Classroom Games', event: 'Talent Expo QMAZE 2K25', issuer: 'Ayya Nadar Janaki Ammal College', date: 'January 2025' },
-    { title: '1st Prize in Legacy of Code', event: 'Softech Association Event', issuer: 'Ayya Nadar Janaki Ammal College', date: 'December 2024' },
-    { title: '1st Prize in Bug Maze', event: 'Softech Association Event', issuer: 'Ayya Nadar Janaki Ammal College', date: 'December 2024' },
-    { title: 'First Class with Distinction in Web Designing', event: 'Certificate Course', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2024' },
-    { title: 'Crash Course on IoT Applications Development', event: 'Real Time Applications Development', issuer: 'Ayya Nadar Janaki Ammal College', date: 'February 2025' },
-    { title: 'Participation in Debugging', event: 'GEN5 2K26 Intercollegiate Meet', issuer: 'The American College', date: 'February 2026' },
-    { title: 'Participation in Coding Contest', event: 'NEXFUSE 2K26 Intercollegiate Symposium', issuer: 'Thiagarajar College', date: 'February 2026' },
-    { title: 'Treasurer', event: 'Softech Association (Academic Year 2025-2026)', issuer: 'Ayya Nadar Janaki Ammal College', date: '2025-2026' }
+    { title: '1st Prize in Debugging', event: 'BYTEWARS State Level Meet', issuer: 'Saiva Bhanu Kshatriya College', date: 'March 2025', image: imgBytewars },
+    { title: '1st Prize in Debugging', event: 'DIGITS\'25 State Level Tech Competition', issuer: 'V.H.N. Senthikumara Nadar College', date: 'August 2025', image: imgDigits },
+    { title: '1st Place in Web Development', event: 'One Day Intra Hackathon 2K26', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2026', image: imgWebDev },
+    { title: '1st Place in Application Development', event: 'One Day Intra Hackathon 2K26', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2026', image: imgAppDev },
+    { title: '1st Prize in Treasure Hunt App', event: 'Talent Expo QMAZE 2K26', issuer: 'Ayya Nadar Janaki Ammal College', date: 'February 2026', image: imgTreasureHunt },
+    { title: '2nd Prize in HTML Classroom Games', event: 'Talent Expo QMAZE 2K25', issuer: 'Ayya Nadar Janaki Ammal College', date: 'January 2025', image: imgHtmlGames },
+    { title: '1st Prize in Legacy of Code', event: 'Softech Association Event', issuer: 'Ayya Nadar Janaki Ammal College', date: 'December 2024', image: imgLegacyOfCode },
+    { title: '1st Prize in Bug Maze', event: 'Softech Association Event', issuer: 'Ayya Nadar Janaki Ammal College', date: 'December 2024', image: imgBugMaze },
+    { title: 'First Class with Distinction in Web Designing', event: 'Certificate Course', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2024', image: imgWebDesign },
+    { title: 'Crash Course on IoT Applications Development', event: 'Real Time Applications Development', issuer: 'Ayya Nadar Janaki Ammal College', date: 'February 2025', image: imgIot },
+    { title: 'Participation in Debugging', event: 'GEN5 2K26 Intercollegiate Meet', issuer: 'The American College', date: 'February 2026', image: null },
+    { title: 'Participation in Coding Contest', event: 'NEXFUSE 2K26 Intercollegiate Symposium', issuer: 'Thiagarajar College', date: 'February 2026', image: null },
+    { title: 'Treasurer', event: 'Softech Association (Academic Year 2025-2026)', issuer: 'Ayya Nadar Janaki Ammal College', date: '2025-2026', image: imgTreasurer }
   ];
 
   return (
@@ -58,34 +68,36 @@ const Certificates = () => {
                 <p style={{ color: 'var(--accent-secondary)', fontSize: '0.8rem', fontWeight: '600', margin: 0, marginTop: '0.2rem' }}>{cert.date}</p>
               </div>
               
-              <div style={{ marginTop: '1rem' }}>
-                <a 
-                  href={certImages[index] || '#'} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    color: 'var(--accent-primary)',
-                    fontSize: '0.9rem',
-                    fontWeight: '600',
-                    border: '1px solid var(--accent-primary)',
-                    padding: '0.4rem 1rem',
-                    borderRadius: '20px',
-                    transition: 'all 0.3s ease',
-                    textDecoration: 'none'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'rgba(0, 255, 135, 0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                  }}
-                >
-                  View <ExternalLink size={14} />
-                </a>
-              </div>
+              {cert.image && (
+                <div style={{ marginTop: '1rem' }}>
+                  <a 
+                    href={cert.image} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      color: 'var(--accent-primary)',
+                      fontSize: '0.9rem',
+                      fontWeight: '600',
+                      border: '1px solid var(--accent-primary)',
+                      padding: '0.4rem 1rem',
+                      borderRadius: '20px',
+                      transition: 'all 0.3s ease',
+                      textDecoration: 'none'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'rgba(0, 255, 135, 0.1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }}
+                  >
+                    View <ExternalLink size={14} />
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}
