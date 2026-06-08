@@ -15,7 +15,7 @@ const Hero = () => {
             I am a BCA graduate specializing in building scalable, high-performance web and mobile applications. With expertise in the MEAN stack, React, and Android development, I turn complex ideas into elegant technical solutions.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="#contact" style={{ textDecoration: 'none' }}>
+            <a href="#projects" style={{ textDecoration: 'none' }}>
               <button className="btn-primary">View My Work</button>
             </a>
             <a href="https://wa.me/919791486908" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
