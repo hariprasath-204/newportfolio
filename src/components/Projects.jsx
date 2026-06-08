@@ -6,7 +6,6 @@ const Projects = () => {
     {
       title: 'R.K. Bajaj Showroom Website',
       description: 'My final year project. A full-stack website for a local vehicle showroom to showcase inventory and manage inquiries.',
-      github: 'https://github.com/hariprasath-204/BikeIndex',
       tags: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MySQL', 'Render']
     },
     {
@@ -90,22 +89,13 @@ const Projects = () => {
                 {project.description}
               </p>
               
-              {(project.github || project.screenshots) && (
+              {project.screenshots && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem', marginBottom: '1rem' }}>
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noreferrer" style={{
-                      display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--accent-secondary)', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
-                    }}>
-                      View Code <Code2 size={14} />
-                    </a>
-                  )}
-                  {project.screenshots && (
-                    <a href={`https://github.com/hariprasath-204/newportfolio/tree/main/src/assets/${project.screenshots}`} target="_blank" rel="noreferrer" style={{
-                      display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#ffb86c', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
-                    }}>
-                      View Screenshots <Image size={14} />
-                    </a>
-                  )}
+                  <a href={`https://github.com/hariprasath-204/newportfolio/tree/main/src/assets/${project.screenshots}`} target="_blank" rel="noreferrer" style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#ffb86c', fontSize: '0.9rem', fontWeight: '600', textDecoration: 'none'
+                  }}>
+                    View Screenshots <Image size={14} />
+                  </a>
                 </div>
               )}
             </div>
