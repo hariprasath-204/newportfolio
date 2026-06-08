@@ -25,8 +25,6 @@ const Certificates = () => {
     { title: '1st Prize in Bug Maze', event: 'Softech Association Event', issuer: 'Ayya Nadar Janaki Ammal College', date: 'December 2024', image: imgBugMaze },
     { title: 'First Class with Distinction in Web Designing', event: 'Certificate Course', issuer: 'Ayya Nadar Janaki Ammal College', date: 'April 2024', image: imgWebDesign },
     { title: 'Crash Course on IoT Applications Development', event: 'Real Time Applications Development', issuer: 'Ayya Nadar Janaki Ammal College', date: 'February 2025', image: imgIot },
-    { title: 'Participation in Debugging', event: 'GEN5 2K26 Intercollegiate Meet', issuer: 'The American College', date: 'February 2026', image: null },
-    { title: 'Participation in Coding Contest', event: 'NEXFUSE 2K26 Intercollegiate Symposium', issuer: 'Thiagarajar College', date: 'February 2026', image: null },
     { title: 'Treasurer', event: 'Softech Association (Academic Year 2025-2026)', issuer: 'Ayya Nadar Janaki Ammal College', date: '2025-2026', image: imgTreasurer }
   ];
 
